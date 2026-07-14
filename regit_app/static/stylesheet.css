@@ -1,0 +1,84 @@
+body {
+    width: 1000px;
+    position: absolute;
+    left: 15%;
+    right: 15%;
+}
+
+.header {
+    height: 70px;
+    background-color: #26d0c9;
+    color: #fff;
+    text-align: center;
+}
+
+.header-logo {
+    font-size:36px;
+    padding: 10px 0 10px 10px;
+}
+
+.main {
+    height: 700px;
+    background-color: white;
+}
+
+.form{
+    height: 500px;
+}
+
+.input{
+    height: 280px;
+    float: left;
+    margin-left: 10px;
+}
+
+input {
+    width: 300px;
+    margin: 5px 0 10px 0;
+    padding: 10px;
+    font-size: 15px
+}
+
+.btn {
+    opacity: 0.9;
+    transition: all 0.3s;
+    border-radius: 4px;
+    box-shadow: 3px 4px lightslategray;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 4px;
+}
+
+.submit {
+    background-color: #dee7ec;
+    color: black;
+    font-size: 10px;
+}
+
+
+.image {
+    float: left;
+    padding: 20px 10px 0px 20px;
+}
+
+.img {
+    height: 170px;
+    background-color: lightblue;
+}
+
+.result {
+    height: 200px;
+    float: none;
+}
+
+.footer {
+    height: 90px;
+    background-color: #dee7ec;
+}

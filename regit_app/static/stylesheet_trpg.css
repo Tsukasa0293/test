@@ -1,0 +1,213 @@
+
+p {
+    font-size: 16px;
+    line-height: 1.5px;
+}
+
+.none{
+    list-style: none;
+}
+
+body {
+    width: 1000px;
+    position: absolute;
+    left: 15%;
+    right: 15%;
+}
+
+.header {
+    height: 70px;
+    background-color: #26d0c9;
+    color: #fff;
+}
+
+/* サイドバー */
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: rgb(223, 223, 223);
+    transition: 0.3s;
+    z-index: 100;
+}
+
+/* 開いた状態 */
+#sidebar.active{
+    left: 0;
+}
+
+
+/* 背景 */
+#overlay{
+    position: fixed;
+    inset: 0;                 /* top/right/bottom/left = 0 */
+    background: rgba(0,0,0,0.5);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+    z-index: 50;
+}
+
+/* 表示 */
+#overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.title  {
+    float: left;
+}
+
+.title h1 {
+    font-size:30px;
+    margin-top: 10px;
+}
+
+.menu {
+    float: right;
+}
+
+.menu_btn {
+    height: 70px;
+    width: 79px;
+    font-size: 30px;
+}
+
+.main {
+    height: 500px;
+    background-color: chartreuse;
+}
+
+.cc {
+    height: 300px;
+    width: 40%;
+    position: absolute;
+    left: 0;
+    background-color: cornsilk;
+    float: left;
+}
+
+.img_cc {
+    height: 170px;
+    width: 170px;
+    float: left;
+}
+
+.img {
+    height: 170px;
+    width: 170px;
+    background-color: lightblue;
+}
+
+.skill {
+    height: 170px;
+    width: 230PX;
+    position: absolute;
+    top: 0;
+    left: 170px;
+    background-color: aliceblue;
+}
+
+.status {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 190px;
+    background-color: blue;
+}
+
+.status_cc {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.status_cc p {
+    font-size: 20px;
+    line-height: 10px;
+}
+
+.result {
+    height: 170px;
+    width: 60%;
+    position: absolute;
+    left: 40%;
+    background-color: cornflowerblue;
+}
+
+.roll_command {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.roll_result {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.form {
+    height: 130px;
+    width: 60%;
+    position: absolute;
+    top: 240px;
+    left: 40%;
+    background-color: rgb(153, 184, 243);
+}
+
+.text_box {
+    height: 50px;
+    width: 550px;
+    position: absolute;
+    left: 20px;
+}
+
+.text {
+    height: 35px;
+    width: 450px;
+    margin-top: 8px;
+    margin-left: 10px;
+    float: left;
+}
+
+.submit {
+    height: 30px;
+    width: 50px;
+    margin-top: 13px;
+    margin-left: 15px;
+    position: relative;
+    top: 75px;
+}
+
+.image {
+    height: 80px;
+    width: 480px;
+    position: absolute;
+    top: 50px;
+    left: 25px;
+}
+
+.imgs {
+    float: left;
+    margin: 5px 10px;
+}
+
+.btn {
+    height: 60px;
+    width: 60px;
+}
+
+.detail {
+    height: 200px;
+    position: relative;
+    top: 300px;
+}

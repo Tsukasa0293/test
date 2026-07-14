@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charset="UTF-8" />
+        <title>bj</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet_bj.css') }}">
+    </head>
+    <body>
+        <header>
+            <div></div>
+        </header>
+        <form method="GET">
+            <div class="sistem">
+                <a href="{{ url_for('start')}}">スタート</a>
+                <p>{{ session['hand_dl'] }}{{ session['total_dl'] }}</p>
+                <p>{{ session['hand_pl'] }}{{ session['total_pl'] }}</p>
+                <a href="{{ url_for('hit') }}">{{ session['hit'] }}</a>
+                <a href="{{ url_for('stand' )}}">{{ session['stand'] }}</a>
+                <p>{{ session['card_list'] }}</p>
+            </div>
+            <div>
+                <p class="bust">{{ session['bust_pl'] }}</p>
+            </div>
+        </form>
+    </body>
+</html>

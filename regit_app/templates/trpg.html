@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charset="UTF-8" />
+        <title>trpg_dice</title>
+        <link rel="stylesheet" href="{{ url_for( 'static',  filename = 'stylesheet_trpg.css') }}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="head">
+                <div class="title">
+                    <h1>クトゥルフ神話TRPG用ダイス</h1>
+                </div>
+                <div class="menu">
+                    <button class="menu_btn" id="btn">☰</button>
+                        <!-- 背景を暗くする -->
+                        <div id="overlay"></div>
+                        <!-- サイドバー -->
+                        <div id="sidebar">メニュー内容</div>
+                        <script src="{{ url_for('static', filename='script.js') }}"></script>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="cc">
+                <div class="img_cc">
+                    <img class="img" src="{{ url_for('static' , filename='images/正四面体.png') }}" alt="No image">
+                </div>
+                <div class="skill">
+                    <div>
+                        <p>a</p>
+                        <p>b</p>
+                        <p>c</p>
+                    </div>
+                </div>
+                <div class="status">
+                    <div class="status_cc">
+                        <p>HP</p>
+                        <p>SAN</p>
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <div class="roll_command">
+                    {% for command in command_db %}
+                        <ul>
+                            <li>{{command}}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+                <div class="roll_result">{{ session['test'] }}</div>   
+            </div>
+            <div class="form">
+                <form action="/dice" method="post">
+                    <div class="text_box">
+                        <input class="text" type="text" name="value">
+                        <input class="submit" type="submit" name="submit" value="決定">
+                    </div>
+                </form>
+                <form action="/dice" method="get">
+                    <div class="image">
+                        <div class="imgs">
+                            <a href="#">
+                                <img class="btn" src="{{ url_for('static' , filename='images/正四面体.png') }}" >
+                            </a>
+                        </div>
+                        <div class="imgs">
+                            <a href="#">
+                                <img class="btn" src="{{ url_for('static' , filename='images/正六面体.png') }}">
+                            </a>
+                        </div>
+                        <div class="imgs">
+                            <a href="#">
+                                <img class="btn" src="{{ url_for('static' , filename='images/正八面体.png') }}">
+                            </a>
+                        </div>
+                        <div class="imgs">
+                            <a href="#">
+                                <img class="btn" src="{{ url_for('static' , filename='images/正十二面体.png') }}">
+                            </a>
+                        </div>
+                        <div class="imgs">
+                            <a href="#">
+                                <img class="btn" src="{{ url_for('static' , filename='images/正二十面体.png') }}">
+                            </a>
+                        </div>
+                        <div class="imgs">
+                            <a href="#">
+                                <img class="btn" src="{{ url_for('static' , filename='images/正八面体.png') }}">
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="detail">
+                <div class="use"></div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </body>
+</html>

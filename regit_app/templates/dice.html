@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lange="ja">
+    <head>
+        <mate charset="UTF-8" />
+        <title>dice</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-logo">ダイスwebアプリ</div>
+        </div>
+        <div class="main">
+            <div class="form">
+                <form action="/dice" method="POST">
+                    <div class="input">
+                        <p>手動入力：</p>
+                        <input type="text" name="value"><br>
+                        <input class="btn submit" type="submit" name="submit" value="決定"><br>
+                        <p>{{ session['text_dice'] }}</p>
+                    </div>
+                </form>
+                <form method="GET">
+                    <div class="image">
+                        <a href="{{ url_for('clicked_4')}}">
+                            <img class="img btn" src="{{ url_for('static' , filename='images/正四面体.png') }}" >
+                        </a>
+                        <p>4面ダイス</p>
+                    </div>
+                    <div class="image">
+                        <a href="{{ url_for('clicked_6')}}">
+                            <img class="img btn" src="{{ url_for('static' , filename='images/正六面体.png') }}">
+                        </a>
+                        <p>6面ダイス</p>
+                    </div>
+                    <div class="image">
+                        <a href="{{ url_for('clicked_8')}}">
+                            <img class="img btn" src="{{ url_for('static' , filename='images/正八面体.png') }}">
+                        </a>
+                        <p>8面ダイス</p>
+                    </div>
+                    <div class="image">
+                        <a href="{{ url_for('clicked_12')}}">
+                            <img class="img btn" src="{{ url_for('static' , filename='images/正十二面体.png') }}">
+                        </a>
+                        <p>12面ダイス</p>
+                    </div>
+                    <div class="image">
+                        <a href="{{ url_for('clicked_20')}}">
+                            <img class="img btn" src="{{ url_for('static' , filename='images/正二十面体.png') }}">
+                        </a>
+                        <p>20面ダイス</p>
+                    </div>
+                </form>
+            </div>
+            <div class="result">
+                <h3>結果</h3>
+                <p>{{ session['total'] }} {{ session['result'] }}</p>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </body>
+</html>
