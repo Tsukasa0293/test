@@ -4,8 +4,10 @@ p {
     line-height: 1.5px;
 }
 
-.none{
+li {
     list-style: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 body {
@@ -79,7 +81,6 @@ body {
 
 .main {
     height: 500px;
-    background-color: chartreuse;
 }
 
 .cc {
@@ -91,12 +92,6 @@ body {
     float: left;
 }
 
-.img_cc {
-    height: 170px;
-    width: 170px;
-    float: left;
-}
-
 .img {
     height: 170px;
     width: 170px;
@@ -105,10 +100,9 @@ body {
 
 .skill {
     height: 170px;
-    width: 230PX;
+    width: 100%;
     position: absolute;
     top: 0;
-    left: 170px;
     background-color: aliceblue;
 }
 
@@ -138,7 +132,11 @@ body {
     width: 60%;
     position: absolute;
     left: 40%;
-    background-color: cornflowerblue;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.result li {
+    color: white;
 }
 
 .roll_command {
@@ -161,6 +159,7 @@ body {
     position: absolute;
     top: 240px;
     left: 40%;
+    border-radius: 20px;
     background-color: rgb(153, 184, 243);
 }
 
@@ -186,6 +185,7 @@ body {
     margin-left: 15px;
     position: relative;
     top: 75px;
+    left: 20px;
 }
 
 .image {
@@ -201,6 +201,13 @@ body {
     margin: 5px 10px;
 }
 
+.imgs button {
+    background: transparent; /* 背景を透明 */
+    border:  1.5px #000000;
+    padding: 0;               /* 余白を消す */
+    cursor: pointer;          /* マウスカーソルを変更 */
+}
+
 .btn {
     height: 60px;
     width: 60px;
@@ -210,4 +217,14 @@ body {
     height: 200px;
     position: relative;
     top: 300px;
+}
+
+.table_2 {
+    position: absolute;
+    top: 0%;
+    left: 40%;
+}
+
+th, td {
+    text-align: center;
 }
